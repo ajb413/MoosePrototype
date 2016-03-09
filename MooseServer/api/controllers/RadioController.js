@@ -2,6 +2,13 @@
 
 module.exports = {
 
+	getRegionId: function (req, res)
+	{
+		//fetches the region id associated based on the user's location
+		//returns the one and only radio for now, id: 1
+		return res.send(200, 1);
+	},
+
 	getRadioQueue: function (req, res)
 	{
 		var sessionData;
@@ -17,7 +24,7 @@ module.exports = {
 		}
 
 		//tune model query based on request data
-		//fine tune this later
+		//TODO: fine tune this later
 		Region.findOne({id : sessionData.regionId})
 		.populate('songs')
 		.then(function (regionObject)
@@ -30,6 +37,24 @@ module.exports = {
 			return res.serverError("Error occured with region model query.");
 		});
 			
+	},
+
+	stream: function (req, res)
+	{
+		//get song that is in request and send it down
+		//place a timestamp on the account owner to restrict them to no more than 3 song req per minute
+
+		//TODO: first validate the request file path
+		var path = req.param('api') + '/' + req.param('fs') + '/' + req.param('radio') + '/' + req.param('song');
+
+		//TODO: .then()
+		var inputStream = sails.fs.createReadStream(path);
+		inputStream.pipe(res);
+
+		//return res.ok();
+
+		//TODO: .then(), add the restriction to the account
+		//.then() return 200 ok
 	},
 
 	addSongToRadio: function (req, res)

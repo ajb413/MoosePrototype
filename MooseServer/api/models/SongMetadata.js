@@ -27,7 +27,7 @@ module.exports = {
   seedData: [
   	{
   		region: 1,
-  		contents: 'api/song-fs/radio1/Under the Bridge Sample.mp3',
+  		contents: 'api/song-fs/radio1/UnderTheBridgeSample.mp3',
   		title: 'Under the Bridge Sample',
   		artist: 'RHCP',
   		fileType: 'mp3',
@@ -35,7 +35,7 @@ module.exports = {
   	},
   	{
   		region: 1,
-  		contents: 'api/song-fs/radio1/Sandstorm Sample.mp3',
+  		contents: 'api/song-fs/radio1/SandstormSample.mp3',
   		title: 'Sandstorm Sample',
   		artist: 'Darude',
   		fileType: 'mp3',

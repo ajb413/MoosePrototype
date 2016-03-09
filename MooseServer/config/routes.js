@@ -37,7 +37,12 @@ module.exports.routes = {
   },
 
   'GET /radio/getRadioQueue' : 'RadioController.getRadioQueue',
+  'GET /radio/getRegionId' : 'RadioController.getRegionId',
   'POST /radio/addSongToRadio' : 'RadioController.addSongToRadio',
+  'GET /radio/stream/:api/:fs/:radio/:song' : {
+    controller: 'RadioController',
+    action: 'stream'
+  }
 
   /***************************************************************************
   *                                                                          *
