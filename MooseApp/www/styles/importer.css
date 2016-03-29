@@ -1,0 +1,10 @@
+.main-radio-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 285px;
+}
+.radio-queue-container,
+.controls-container {
+  border: 1px solid #000000;
+  margin: 10px;
+}

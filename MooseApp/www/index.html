@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moose</title>
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="styles/importer.css">
+  </head>
+
+  <body>
+    <h1>
+        Moose
+    </h1>
+
+    <div class="main-radio-container">
+
+        <div class="radio-queue-container">
+
+            <h2>
+                Radio Queue
+            </h2>
+
+            <ul id="RadioQueueUl"></ul>
+
+        </div>
+
+        <div class="controls-container">
+
+            <h2>
+                Input a New Song for the Radio
+            </h2>
+
+            <br />
+
+            <input type="file" id="NewSongInput" />
+
+            <br />
+
+            Song Title: <input type="text" id="NewSongTitle" />
+
+            <br />
+
+            Artist: <input type="text" id="NewSongArtist" />
+
+            <br />
+
+            <input type="submit" text="Submit Song" id="SubmitSong" />
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/dependencies/jquery-1.12.1.min.js"></script>
+    <script src="js/RadioHome.js"></script>
+
+  </body>
+</html>
